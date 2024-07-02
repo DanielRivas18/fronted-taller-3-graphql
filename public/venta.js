@@ -29,7 +29,7 @@ document.getElementById('ventaFormulario').addEventListener('submit', async func
         const result = await response.json();
 
         if (response.ok) {
-            alert('Producto vendido exitosamente.');
+            alert('solicitud de venta exitosa.');
         } else {
             alert('Error: ' + result.errors[0].message);
         }
