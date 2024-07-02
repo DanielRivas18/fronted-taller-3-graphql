@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Productos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/indexPrincipal.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a href="/" class="navbar-brand"><strong>MISCELANEA LOCAL</strong></a>
+            </div>
+        </nav>
+    </header>
+
+    <form id="miFormulario" class="container mt-5">
+        <div class="formulario__title text-center mb-4">DATOS DEL NUEVO PRODUCTO</div>
+        <div class="form-group mb-3">
+            <input type="hidden" class="form-control" required readonly name="id" id="id" value="">
+        </div>
+        <div class="form-group mb-3">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" required name="nombre" id="nombre"
+                placeholder="Nombre del producto">
+        </div>
+        <div class="form-group mb-3">
+            <label for="inventario">Inventario:</label>
+            <input type="number" class="form-control" required name="inventario" id="inventario"
+                placeholder="Inventario del producto">
+        </div>
+        <div class="form-group mb-3">
+            <label for="tipo_producto">Tipo de Producto:</label>
+            <select id="tipo_producto" name="tipo_producto" class="form-control" required>
+                <option value="">Selecciona un tipo de producto</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Granos">Granos</option>
+                <option value="Endulzantes">Endulzantes</option>
+                <option value="Condimentos">Condimentos</option>
+                <option value="Higiene">Higiene</option>
+                <option value="Panadería">Panadería</option>
+                <option value="Lácteos">Lácteos</option>
+                <option value="Cereales">Cereales</option>
+                <option value="Frutas">Frutas</option>
+                <option value="Conservas">Conservas</option>
+                <option value="Golosinas">Golosinas</option>
+                <option value="Salsas">Salsas</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="fecha_vencimiento">Fecha de Vencimiento:</label>
+            <input type="date" class="form-control" name="fecha_vencimiento" id="fecha_vencimiento"
+                placeholder="Fecha de vencimiento del producto">
+        </div>
+        <div class="form-group mb-3">
+            <label for="precio">Precio:</label>
+            <input type="number" class="form-control" required name="precio" id="precio"
+                placeholder="Precio del producto">
+        </div>
+        <div class="form-group mb-3">
+            <input type="hidden" class="form-control" required name="estado_actual" id="estado_actual">
+        </div>
+        <div class="form-group mb-3">
+            <input type="hidden" class="form-control" required name="fecha_ingreso" id="fecha_ingreso">
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+            <a href="/" class="btn btn-secondary">Volver</a>
+        </div>
+    </form>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="addProducts.js"></script>
+</body>
+
+</html>

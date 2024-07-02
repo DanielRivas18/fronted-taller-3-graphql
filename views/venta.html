@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Productos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/indexPrincipal.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div>
+        <form id="ventaFormulario" class="container mt-5">
+            <div class="formulario__title text-center mb-4">VENDER PRODUCTO</div>
+            <div class="form-group">
+                <label for="nombre">Nombre del Producto (opcional):</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del producto"
+                    autocomplete="off">
+                <ul id="sugerencias" class="list-group" style="position: absolute; z-index: 1000;"></ul>
+            </div>
+            <div class="form-group mb-3">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" class="form-control" required name="cantidad" id="cantidad"
+                    placeholder="Cantidad a vender">
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">Vender</button>
+                <a href="/" class="btn btn-secondary">Volver</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+<body>
+
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>PRODUCTOS</h1>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Inventario</th>
+                            <th scope="col">Precio</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="tBodi">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="venta.js"></script>
+    <script src="tablaVentas.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
